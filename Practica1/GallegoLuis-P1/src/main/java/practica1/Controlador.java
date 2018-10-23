@@ -51,6 +51,32 @@ public class Controlador implements Serializable {
 		this.titulo = colorTitulo;
 	}
 	
+	public String getBotonOnOff() {
+		if(botonOnOff != null) return botonOnOff;
+		else return "ENCENDER";
+	}
+	
+	public void setBotonOnOff(String botonOnOff) {
+		this.botonOnOff = botonOnOff;
+	}
+	
+	public String getColorOnOff() {
+		if(colorOnOff != null) return colorOnOff;
+		else return "green";
+	}
+	
+	public void setColorOnOff(String colorOnOff) {
+		this.colorOnOff = colorOnOff;
+	}
+	
+	public String getcolorAcelerar() {
+		if(colorAcelerar != null) return colorAcelerar;
+		else return "grey";
+	}
+	
+	public void setcolorAcelerar(String colorAcelerar) {
+		this.colorAcelerar = colorAcelerar;
+	}
 	
 	
 
