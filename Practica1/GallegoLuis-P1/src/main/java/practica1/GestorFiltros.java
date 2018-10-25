@@ -1,5 +1,8 @@
 package practica1;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
+
 /*
  * Crea la cadena de Filtros
  * Posee métodos para insertar los filtros en la cadena y provoca que cada uno ejecute
@@ -19,7 +22,7 @@ public class GestorFiltros {
 		filtros.addFiltro(filtro);
 	}
 	
-	public void ejecutar(double peticion) {
+	public void ejecutar(double peticion) throws IOException, URISyntaxException {
 		filtros.ejecutar(peticion);
 	}
 

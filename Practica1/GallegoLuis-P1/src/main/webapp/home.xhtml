@@ -5,9 +5,24 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html">
 	<head>
-		<title>PRÁCTICA 1</title>
+		<title>DSS - Práctica 1</title>		   
 	</head>
 	<body>
-		
+		<h:form style="margin-left:50px; margin-top:50px">
+			<h2 style="margin-left:5px; color:#{controlador.colorTitulo};">
+			 #{controlador.titulo}
+			</h2>
+			<h:commandButton 
+				id="botonOnOff"
+				value="#{controlador.botonOnOff}"
+				style="color:#{controlador.colorOnOff}"
+				actionListener="#{controlador.actualizaBotonOnOff}" />			
+			<h:commandButton
+				id="botonAcelerar"
+				value="ACELERAR"
+				style="color:#{controlador.colorAcelerar}"
+				actionListener="#{controlador.actualizaBotonAcelerar}" />
+		</h:form>
 	</body>
+	
 </html>

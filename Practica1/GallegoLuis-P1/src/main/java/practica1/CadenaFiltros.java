@@ -1,6 +1,8 @@
 package practica1;
 
 import java.util.List;
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 /*
@@ -23,7 +25,7 @@ public class CadenaFiltros {
 		filtros.add(filtro);
 	}
 	
-	public void ejecutar(double peticion) {
+	public void ejecutar(double peticion) throws IOException, URISyntaxException {
 		for(Filtro filtro:filtros) {
 			System.out.println("Nueva velocidad (m/s)" + filtro.ejecutar(peticion));
 		}

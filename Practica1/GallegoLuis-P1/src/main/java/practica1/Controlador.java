@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
+import javax.faces.event.ActionEvent;
 
 @ManagedBean(name = "controlador", eager = true)
 @SessionScoped
@@ -20,17 +21,10 @@ public class Controlador implements Serializable {
 	private final int ENCENDIDO = 1;
 	private final int ACELERANDO = 2;
 	
-	
-	
-	@ManagedProperty(value = "#{titulo}")
 	private String titulo;
-	@ManagedProperty(value = "#{colorTitulo}")
 	private String colorTitulo;
-	@ManagedProperty(value = "#{botonOnOff}")
 	private String botonOnOff;
-	@ManagedProperty(value = "#{colorOnOff}")
 	private String colorOnOff;
-	@ManagedProperty(value = "#{colorAcelerar}")
 	private String colorAcelerar;
 	
 	public String getTitulo() {
@@ -78,6 +72,39 @@ public class Controlador implements Serializable {
 		this.colorAcelerar = colorAcelerar;
 	}
 	
+	public void actualizaBotonOnOff(ActionEvent e) {
+		
+		if(estado == APAGADO) encender();
+		else if(estado == ENCENDIDO || estado == ACELERANDO) apagar();			
+	}
 	
+	public void actualizaBotonAcelerar(ActionEvent e) {
+		
+		if(estado == ENCENDIDO || estado == ACELERANDO) acelerar();
+	}
+	
+	private void acelerar() {
+		estado = ACELERANDO;
+		titulo = "ACELERANDO";
+		colorTitulo = "blue";
+	}
+	
+	private void encender() {
+		estado = ENCENDIDO;
+		titulo = "ENCENDIDO";
+		colorTitulo = "green";
+		botonOnOff = "APAGAR";
+		colorOnOff = "red";
+		colorAcelerar = "black";
+	}
+	
+	private void apagar() {
+		estado = APAGADO;
+		titulo = "APAGADO";
+		colorTitulo = "red";
+		botonOnOff = "ENCENDER";
+		colorOnOff = "green";
+		colorAcelerar = "grey";		
+	}	
 
 }
