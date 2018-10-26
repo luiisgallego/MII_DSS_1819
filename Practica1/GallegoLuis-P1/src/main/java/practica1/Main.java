@@ -11,7 +11,7 @@ public class Main {
 		gestorFiltros.setFiltro(new Calcular());
 		Cliente cliente = new Cliente();
 		cliente.setGestorFiltros(gestorFiltros);
-		cliente.enviarPeticion(500); 				// Número inicial de vueltas del eje
+		cliente.enviarPeticion(100); 				// Número inicial de vueltas del eje
 		
 	}
 
