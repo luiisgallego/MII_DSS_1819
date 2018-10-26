@@ -8,14 +8,14 @@
 		<title>DSS - Práctica 1</title>		   
 	</head>
 	<body>
-		<h:form style="margin-left:50px; margin-top:50px">
-			<h2 style="margin-left:5px; color:#{controlador.colorTitulo};">
+		<h:form style="width: 250px; margin-left: 50px; margin-top: 50px; border-style: solid; border-color: #00FFFF;">
+			<h2 style="margin-left: 50px; color:#{controlador.colorTitulo};">
 			 #{controlador.titulo}
 			</h2>
 			<h:commandButton 
 				id="botonOnOff"
 				value="#{controlador.botonOnOff}"
-				style="color:#{controlador.colorOnOff}"
+				style="color:#{controlador.colorOnOff}; margin-left: 50px; margin-bottom: 20px;"
 				actionListener="#{controlador.actualizaBotonOnOff}" />			
 			<h:commandButton
 				id="botonAcelerar"
@@ -23,6 +23,5 @@
 				style="color:#{controlador.colorAcelerar}"
 				actionListener="#{controlador.actualizaBotonAcelerar}" />
 		</h:form>
-	</body>
-	
+	</body>	
 </html>
