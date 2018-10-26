@@ -12,9 +12,7 @@ import java.util.ArrayList;
 
 public class CadenaFiltros {
 	
-	// private Filtros ArrayList de filtros
 	private List<Filtro> filtros;	
-	// Objeto que se encarga de procesar la peticion que se envía desde el cliente (clase Interfaz)
 	private Interfaz objetivo;
 	
 	public CadenaFiltros() {
@@ -26,6 +24,7 @@ public class CadenaFiltros {
 	}
 	
 	public void ejecutar(double peticion) throws IOException, URISyntaxException {
+		
 		for(Filtro filtro:filtros) {
 			System.out.println("Nueva velocidad (m/s)" + filtro.ejecutar(peticion));
 		}
