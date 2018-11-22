@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;HolaMundo.bpel, HolaMundo.bpelex, HolaMundoArtifacts.wsdl&apos; to &apos;bpelContent&apos;" description="Move 3 resources to &apos;bpelContent&apos;" destination="bpelContent" element1="/Practica3/HolaMundo.bpel" element2="/Practica3/HolaMundo.bpelex" element3="/Practica3/HolaMundoArtifacts.wsdl" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="3" stamp="1542883867721" updateReferences="true"/>
+</session>
